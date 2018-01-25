@@ -1,14 +1,52 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Turn Counter
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content  class="padding">
+  
+  <div class = "item item-block">
+    <ion-item padding-top>
+        <ion-input type="text" class="button" (keyup.enter)="add()" [class.hide]="!isenabled" clearInput [(ngModel)]="name" id="inputId" placeholder="enter name"></ion-input>
+        <button ion-button padding [class.hide]="!isenabled" item-right [ngStyle]="{'background-color': nextColor}" class="button padding2" (click)="add()">add</button>
+    </ion-item>
+  </div>
+  <div class="item row">
+      <div class="col">
+        <div padding-top>
+          <ion-item>
+            <ion-label class="button">Current player:</ion-label>
+            <ion-label text-center>
+            <ion-label class="button-name" item-center>{{current}}</ion-label>
+            </ion-label>
+          </ion-item>
+        </div>
+      </div>
+  </div>
+  <ion-buttons text-center>
+      <div padding-top>
+    <button ion-button id="addId" class="button padding" [ngStyle]="{'background-color': buttonColor}" (click)="start()">{{button}}</button>
+    </div>
+  </ion-buttons>
+  <ion-buttons text-center >
+      <div padding-top>
+    <button ion-button full class="button padding" [ngStyle]="{'background-color': nextColor}" (click)="next()">next player</button>
+    </div>
+  </ion-buttons>
+  
+  <div padding-top>
+    <ion-label text-center>
+      <ion-label class="button" *ngIf="added">Order</ion-label>
+    </ion-label>
+  </div>
+<div>  
+<ion-card>
+  <ion-list>
+      <ion-item no-lines class="bottom-border" *ngFor="let name of names">{{name}}</ion-item>
+  </ion-list>
+</ion-card>
+</div>
 </ion-content>

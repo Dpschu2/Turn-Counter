@@ -1,3 +1,37 @@
 page-home {
-
+    .button{
+        font-family: 'Comic Neue', sans-serif;
+        font-weight: 700;
+        font-size: 1.2em;
+        line-height: 1.5;
+    }
+    .button-name{
+        font-family: 'Comic Neue', sans-serif;
+        font-weight: 700;
+        font-size: 2em;
+        line-height: 1.5;
+    }
+    .item[no-lines].bottom-border { 
+        border-bottom: 1px solid grey; 
+    }
+    .padding{
+        margin-top: 20px;
+        padding: 25px;
+    }
+    .padding2{
+        padding: 35px;
+    }
+    .card-2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      }
+    .card {
+    background: rgb(37, 74, 92);
+    border-radius: 2px;
+    position: relative;
+    margin: 1.2rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    }
+    .hide {
+        display: none;
+    }
 }
